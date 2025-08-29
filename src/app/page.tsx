@@ -98,7 +98,7 @@ export default function AuraPage() {
         
         <div className="container mx-auto text-center relative z-10">
           <div className={`transition-all duration-1000 ${isVisible ? "animate-fade-in-up" : "opacity-0"}`}>
-            <Badge variant="primary" className="mb-4">
+            <Badge variant="default" className="mb-4">
               Revolutionary Skincare
             </Badge>
             <h2 className="text-5xl md:text-7xl font-serif font-black text-primary mb-6">
