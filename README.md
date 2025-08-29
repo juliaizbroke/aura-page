@@ -1,36 +1,122 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aura - Color-Changing Herbal Scrub Marketing Page
 
-## Getting Started
+A beautiful, minimalistic marketing website for Aura, a revolutionary color-changing herbal scrub product. Built with Next.js 15, Material UI, and TypeScript.
 
-First, run the development server:
+## Features
 
+- **Responsive Design**: Mobile-first approach with beautiful animations
+- **Material UI Components**: Modern, accessible UI components
+- **Custom Color Scheme**: Unique brand colors (#3f6d7e, #7E3F4E, #7E6F3F)
+- **Smooth Animations**: Subtle slide and fade animations for enhanced UX
+- **SEO Optimized**: Proper metadata and semantic HTML structure
+
+## Sections
+
+1. **Hero Section** - Eye-catching introduction with call-to-action
+2. **Product Overview** - Detailed product description
+3. **Unique Features** - Key selling points with icons
+4. **Benefits** - Skin and wellness benefits
+5. **How to Apply** - Step-by-step usage instructions
+6. **Refill Program** - Eco-friendly sustainability initiative
+7. **About Packaging** - Environmental and design features
+8. **Contact Us** - Customer engagement section
+
+## Dependencies to Install
+
+Before running the project, you need to install the following dependencies:
+
+### Core Dependencies
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install @mui/material @emotion/react @emotion/styled
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Additional Material UI Components (Optional but Recommended)
+```bash
+npm install @mui/icons-material @mui/lab
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Development Dependencies (Optional)
+```bash
+npm install @types/react @types/react-dom
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Installation
 
-## Learn More
+1. **Install Dependencies**
+   ```bash
+   npm install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Install Material UI Dependencies**
+   ```bash
+   npm install @mui/material @emotion/react @emotion/styled
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Run Development Server**
+   ```bash
+   npm run dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. **Open Browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+aura-page/
+├── src/
+│   └── app/
+│       ├── layout.tsx          # Root layout with Material UI theme
+│       ├── page.tsx            # Main Aura marketing page
+│       └── globals.css         # Custom styles and animations
+├── public/                     # Static assets (images, icons)
+├── package.json                # Project dependencies
+└── README.md                   # This file
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Customization
+
+### Colors
+The page uses a custom color palette:
+- Primary: `#3f6d7e` (Deep Blue-Green)
+- Secondary: `#7E3F4E` (Rich Burgundy)
+- Accent: `#7E6F3F` (Warm Gold)
+
+### Typography
+- Uses Geist font family for modern, clean typography
+- Responsive font sizes for mobile and desktop
+
+### Animations
+- Fade-in effects for page load
+- Slide-up animations for sections
+- Hover effects on cards and buttons
+
+## Building for Production
+
+```bash
+npm run build
+npm start
+```
+
+## Technologies Used
+
+- **Next.js 15** - React framework with App Router
+- **Material UI** - Component library for consistent design
+- **TypeScript** - Type-safe JavaScript
+- **Emotion** - CSS-in-JS styling solution
+- **Responsive Design** - Mobile-first approach
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## Contributing
+
+This is a marketing page template. Feel free to customize colors, content, and styling to match your brand requirements.
+
+## License
+
+This project is for demonstration purposes. Please ensure you have the right to use any images or content in your production version.
