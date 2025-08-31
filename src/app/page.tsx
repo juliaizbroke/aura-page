@@ -72,6 +72,9 @@ export default function AuraPage() {
             <a href="#benefits" className="text-foreground hover:text-primary transition-colors">
               Benefits
             </a>
+            <a href="#loyalty" className="text-foreground hover:text-primary transition-colors">
+              Loyalty
+            </a>
             <a href="#contact" className="text-foreground hover:text-primary transition-colors">
               Contact
             </a>
@@ -212,8 +215,7 @@ export default function AuraPage() {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-center font-sans">
-                  Watch as the scrub changes from deep green to vibrant pink, indicating when your skin has been
-                  perfectly exfoliated
+                  Watch as the scrub changes from blue to vibrant violet, indicating inflammation or muscle pain
                 </CardDescription>
               </CardContent>
             </Card>
@@ -222,11 +224,11 @@ export default function AuraPage() {
                 <div className="mx-auto mb-4 p-3 bg-accent/10 rounded-full w-fit">
                   <Leaf className="h-8 w-8  text-accent" />
                 </div>
-                <CardTitle className="font-serif">Herbal Infusion</CardTitle>
+                <CardTitle className="font-serif">Botanical Infusion</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-center font-sans">
-                  Enriched with chamomile, lavender, and green tea extracts for soothing and nourishing properties
+                  Enriched with aloe vera, peppermint, and butterfly pea extract to soothe and refresh the skin. Blended with sodium citrate and innovative thermochromic pigments, bringing both balance and a touch of magic to your skincare ritual.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -309,44 +311,191 @@ export default function AuraPage() {
         </div>
       </section>
 
+      {/* Loyalty Badge System */}
+      <section 
+        id="loyalty"
+        ref={setSectionRef("loyalty")}
+        className={`py-16 px-4 bg-card section-fade-in ${visibleSections.has("loyalty") ? "visible" : ""}`}
+      >
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h3 className="text-4xl font-serif font-bold text-card-foreground mb-4">AURA Loyalty Program  </h3>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-sans">
+              Earn points, unlock tiers, and redeem exclusive rewards as you discover the magic of Aura
+            </p>
+          </div>
+          
+          
+          {/* Tiers Section */}
+          <div className="text-center mb-8">
+            <h4 className="text-2xl font-serif font-bold text-card-foreground mb-4">Loyalty Tiers</h4>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Silver Tier */}
+            <div className="relative bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8 text-center hover-lift border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gray-400 to-gray-600"></div>
+              <div className="mx-auto mb-6 w-24 h-24 flex items-center justify-center bg-white rounded-full shadow-lg p-2">
+                <img 
+                  src="/image/badge-silver.png" 
+                  alt="Silver Badge" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <h4 className="text-2xl font-serif font-bold text-gray-800 mb-2">Silver</h4>
+              <p className="text-sm text-gray-600 mb-6 font-sans font-medium">Wellness Seeker - Unlocks at 1,000 Points</p>
+              <div className="space-y-4 text-left">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-gray-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-sm text-gray-800 font-sans font-medium">Enhanced point earning rates</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-gray-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-sm text-gray-700 font-sans">Access to exclusive wellness content</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-gray-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-sm text-gray-700 font-sans">Birthday rewards and special offers</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Gold Tier */}
+            <div className="relative bg-gradient-to-br from-yellow-50 to-amber-100 rounded-2xl p-8 text-center hover-lift border border-yellow-200 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-amber-600"></div>
+              <div className="mx-auto mb-6 w-24 h-24 flex items-center justify-center bg-white rounded-full shadow-lg p-2">
+                <img 
+                  src="/image/badge-gold.png" 
+                  alt="Gold Badge" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <h4 className="text-2xl font-serif font-bold text-amber-800 mb-2">Gold</h4>
+              <p className="text-sm text-amber-700 mb-6 font-sans font-medium">Luxury Healer - Unlocks at 3,000 Points</p>
+              <div className="space-y-4 text-left">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-amber-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-sm text-amber-800 font-sans font-medium">Premium point earning rates</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-amber-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-sm text-amber-700 font-sans">Free gift wrapping and personalized notes</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-amber-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-sm text-amber-700 font-sans">Early access to new product launches</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Platinum Tier */}
+            <div className="relative bg-gradient-to-br from-purple-50 to-indigo-100 rounded-2xl p-8 text-center hover-lift border border-purple-200 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-400 to-indigo-600"></div>
+              <div className="mx-auto mb-6 w-24 h-24 flex items-center justify-center bg-white rounded-full shadow-lg p-2">
+                <img 
+                  src="/image/badge-plat.png" 
+                  alt="Platinum Badge" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <h4 className="text-2xl font-serif font-bold text-purple-800 mb-2">Platinum</h4>
+              <p className="text-sm text-purple-700 mb-6 font-sans font-medium">Aura Elite - Unlocks at 6,000 Points</p>
+              <div className="space-y-4 text-left">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-sm text-purple-800 font-sans font-medium">Maximum point earning rates</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-sm text-purple-700 font-sans">VIP spa invites and consultations</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-sm text-purple-700 font-sans">Exclusive experiences and early pre-orders</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </section>
+
       {/* Refill Program */}
       <section 
         id="refill-program"
         ref={setSectionRef("refill-program")}
-        className={`py-16 px-4 bg-card section-fade-in ${visibleSections.has("refill-program") ? "visible" : ""}`}
+        className={`py-20 px-4 bg-card section-fade-in ${visibleSections.has("refill-program") ? "visible" : ""}`}
       >
         <div className="container mx-auto">
-          <div className="grid md:grid-cols-2 gap-5 items-center">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-6">
+              <Recycle className="h-8 w-8 text-accent" />
+            </div>
+            <h3 className="text-5xl font-serif font-bold text-card-foreground mb-4">Sustainable Refill Program</h3>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-sans">
+              Join our eco-friendly refill program and save 30% while making a positive impact on our planet
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Image Left */}
-            <div className="order-1 md:order-none">
-              <div className="w-full overflow-hidden rounded-2xl">
+            <div className="order-1 lg:order-none relative">
+              <div className="h-200 relative overflow-hidden rounded-3xl shadow-2xl">
                 <img
                   src="/image/refill.jfif"
                   alt="Aura Refill Program"
-                  className="h-150 w-full object-cover rounded-2xl"
+                  className="w-full object-contain rounded-3xl hover:scale-105 transition-transform duration-700"
+                  
                 />
               </div>
             </div>
 
             {/* Content Right */}
-            <div className="text-left">
-              <h3 className="text-4xl font-serif font-bold text-card-foreground mb-4">Refill Program</h3>
-              <p className="text-lg text-muted-foreground mb-6 font-sans">
-                Join our sustainable refill program and save 30% on every refill while reducing environmental impact.
-                Keep your beautiful Aura jar and simply order refill pouches delivered to your door.
-              </p>
-              <div className="grid sm:grid-cols-3 gap-6 mb-8">
-                <div className="p-0 sm:p-2">
-                  <h4 className="text-lg font-serif font-semibold text-card-foreground mb-1">Save Money</h4>
-                  <p className="text-muted-foreground font-sans text-sm">30% off every refill order</p>
+            <div className="text-left space-y-8">
+              <div>
+                <h4 className="text-3xl font-serif font-bold text-card-foreground mb-4">Keep Your Beautiful Jar, Just Refill!</h4>
+                <p className="text-lg text-muted-foreground mb-6 font-sans leading-relaxed">
+                  Your Aura jar is designed to last forever. Now, instead of buying new packaging or pouches, simply bring your jar to one of our refill stations. Refill at a lower cost, reduce waste, and keep your skincare ritual sustainable.
+                </p>
+              </div>
+
+              {/* Benefits Cards */}
+              <div className="grid gap-6">
+                <div className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-accent">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
+                      <span className="text-2xl">💰</span>
+                    </div>
+                    <div>
+                      <h5 className="text-xl font-serif font-bold text-card-foreground mb-1">Save Money</h5>
+                      <p className="text-muted-foreground font-sans">30% off every refill order - keep more money in your pocket</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="p-0 sm:p-2">
-                  <h4 className="text-lg font-serif font-semibold text-card-foreground mb-1">Eco-Friendly</h4>
-                  <p className="text-muted-foreground font-sans text-sm">Reduce packaging waste by 80%</p>
+
+                <div className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-background">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-background/10 rounded-full flex items-center justify-center">
+                      <Leaf className="h-6 w-6 text-background" />
+                    </div>
+                    <div>
+                      <h5 className="text-xl font-serif font-bold text-card-foreground mb-1">Eco-Friendly</h5>
+                      <p className="text-muted-foreground font-sans">Reduce packaging waste by 80% - help protect our planet</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="p-0 sm:p-2">
-                  <h4 className="text-lg font-serif font-semibold text-card-foreground mb-1">Convenient</h4>
-                  <p className="text-muted-foreground font-sans text-sm">Automatic delivery options available</p>
+
+                <div className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-chart-5">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-chart-5/10 rounded-full flex items-center justify-center">
+                      <Package className="h-6 w-6 text-chart-5" />
+                    </div>
+                    <div>
+                      <h5 className="text-xl font-serif font-bold text-card-foreground mb-1">Community & Convenience</h5>
+                      <p className="text-muted-foreground font-sans">Find refill stations at select partner stores and events near you – refill your Aura jar anytime, with zero waste.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -388,10 +537,10 @@ export default function AuraPage() {
               </ul>
             </div>
             <div className="relative">
-              <div className="h-160 aspect-3/4 bg-gradient-to-br from-muted/20 to-accent/20 rounded-2xl flex items-center justify-center overflow-hidden">
+              <div className="h-180 bg-gradient-to-br from-muted/20 to-accent/20 rounded-2xl flex items-center justify-center overflow-hidden">
                 {/* First Image */}
                 <img
-                  src="/image/bottle.jfif"
+                  src="/image/bottle.jpg"
                   alt="Sustainable Aura Packaging - Glass Jar"
                   className={`absolute inset-0 w-full h-full object-cover rounded-2xl transition-opacity duration-1000 ${
                     currentImageIndex === 0 ? 'opacity-100' : 'opacity-0'
@@ -399,7 +548,7 @@ export default function AuraPage() {
                 />
                 {/* Second Image */}
                 <img
-                  src="/image/empty_bottle.jfif"
+                  src="/image/empty_bottle.jpg"
                   alt="Sustainable Aura Packaging - Refill System"
                   className={`absolute inset-0 w-full h-full object-cover rounded-2xl transition-opacity duration-1000 ${
                     currentImageIndex === 1 ? 'opacity-100' : 'opacity-0'
@@ -407,7 +556,7 @@ export default function AuraPage() {
                 />
                 {/* Third Image */}
                 <img
-                  src="/image/bottle2.jfif"
+                  src="/image/bottle2.jpg"
                   alt="Sustainable Aura Packaging - Eco-Friendly"
                   className={`absolute inset-0 w-full h-full object-cover rounded-2xl transition-opacity duration-1000 ${
                     currentImageIndex === 2 ? 'opacity-100' : 'opacity-0'
@@ -435,7 +584,7 @@ export default function AuraPage() {
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <Card className="text-center hover-lift">
               <CardHeader>
-                <Mail className="h-8 w-8 text-primary mx-auto mb-2" />
+                <Mail className="h-8 w-8 text-muted-foreground mx-auto mb-2" />
                 <CardTitle className="font-serif">Email Us</CardTitle>
               </CardHeader>
               <CardContent>
@@ -445,7 +594,7 @@ export default function AuraPage() {
             </Card>
             <Card className="text-center hover-lift">
               <CardHeader>
-                <Phone className="h-8 w-8 text-primary mx-auto mb-2" />
+                <Phone className="h-8 w-8 text-muted-foreground mx-auto mb-2" />
                 <CardTitle className="font-serif">Call Us</CardTitle>
               </CardHeader>
               <CardContent>
@@ -455,7 +604,7 @@ export default function AuraPage() {
             </Card>
             <Card className="text-center hover-lift">
               <CardHeader>
-                <MapPin className="h-8 w-8 text-primary mx-auto mb-2" />
+                <MapPin className="h-8 w-8 text-muted-foreground mx-auto mb-2" />
                 <CardTitle className="font-serif">Visit Us</CardTitle>
               </CardHeader>
               <CardContent>
@@ -478,12 +627,15 @@ export default function AuraPage() {
             <Sparkles className="h-6 w-6 text-primary" />
             <h4 className="text-xl font-serif font-bold text-primary">Aura</h4>
           </div>
-          <p className="text-muted-foreground font-sans mb-4">
+          <p className="text-primary font-sans mb-4">
             Transform your skincare routine with the magic of color-changing herbal scrub
           </p>
           <Separator className="my-6" />
-          <p className="text-sm text-muted-foreground font-sans">
-            © 2024 Aura Skincare. All rights reserved. | Privacy Policy | Terms of Service
+          <p className="text-sm text-primary font-sans">
+            © 2024 Aura Skincare. All rights reserved.
+          </p>
+          <p className="text-sm text-primary font-sans">
+            Developed by <a href="https://www.juliathwin.me" className="text-secondary">@Julia</a>
           </p>
         </div>
       </footer>

@@ -19,6 +19,8 @@
   --muted-foreground: oklch(0.3 0.05 200); /* Dark teal muted text for readability */
   --accent: oklch(0.4 0.08 340); /* Burgundy accent #7E3F4E */
   --accent-foreground: oklch(1 0 0); /* White text on accent */
+  --gold: oklch(0.9047 0.1154 102.28); /* Gold color for buttons */
+  --gold-foreground: oklch(0.2 0.05 200); /* Dark teal text on gold */
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(1 0 0);
   --border: oklch(0.8 0.02 220); /* Lighter border for better contrast */
@@ -57,6 +59,8 @@
   --muted-foreground: oklch(0.708 0 0);
   --accent: oklch(0.269 0 0);
   --accent-foreground: oklch(0.985 0 0);
+  --gold: oklch(0.75 0.12 75); /* Darker gold for dark theme */
+  --gold-foreground: oklch(0.145 0 0); /* Dark background text on gold */
   --destructive: oklch(0.396 0.141 25.723);
   --destructive-foreground: oklch(0.637 0.237 25.331);
   --border: oklch(0.269 0 0);
@@ -95,6 +99,8 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
@@ -354,7 +360,7 @@
 
 .hover-lift:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 25px rgba(240, 237, 18, 0.15);
 }
 
 .animate-spin-slow {
