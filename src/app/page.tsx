@@ -632,7 +632,7 @@ export default function AuraPage() {
           </p>
           <Separator className="my-6" />
           <p className="text-sm text-primary font-sans">
-            © 2024 Aura Skincare. All rights reserved.
+            © 2025 Aura Skincare. All rights reserved.
           </p>
           <p className="text-sm text-primary font-sans">
             Developed by <a href="https://www.juliathwin.me" className="text-secondary">@Julia</a>
